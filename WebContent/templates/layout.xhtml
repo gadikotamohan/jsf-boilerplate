@@ -16,6 +16,16 @@
 		            $('#loginLink').fadeOut();
 		        }
 		    }
+		    
+		    function handleSignupRequest(xhr, status, args) {
+		        if(args.signedUp) {
+		        	PF('dlg').jq.effect("shake", {times:5}, 100);
+		        }
+		        else {
+		        	PF('dlg').hide();
+		            $('#loginLink').fadeOut();
+		        }
+		    }
 		</script>
 
 	</h:head>
