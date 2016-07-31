@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 import javax.naming.Context;
@@ -16,6 +17,7 @@ import javax.sql.DataSource;
 import org.primefaces.context.RequestContext;
 
 @ManagedBean(name = "user")
+@SessionScoped
 public class User {
 	private DataSource ds;
 	public User() throws NamingException{
