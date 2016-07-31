@@ -51,12 +51,6 @@ public class User {
     	ps.setString(1, username);
     	ps.setString(2, password);
     	ResultSet rs = ps.executeQuery();
-//    	while(rs.next()){
-//    		this.username = rs.getString("username");
-//    		System.err.println("Username --> "+rs.getString("username"));
-//    		System.err.println("Password --> "+rs.getString("password"));
-//    	}
-
         if(rs.next()) {
             loggedIn = true;
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", username);
@@ -76,12 +70,6 @@ public class User {
     	ps.setString(1, username);
     	ps.setString(2, password);
     	boolean signedUp = ps.executeUpdate() > 0; // check for success
-//    	while(rs.next()){
-//    		this.username = rs.getString("username");
-//    		System.err.println("Username --> "+rs.getString("username"));
-//    		System.err.println("Password --> "+rs.getString("password"));
-//    	}
-
         if(signedUp) {
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", username);
         } else {
